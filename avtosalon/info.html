@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>BMW AutoPark</title>
+</head>
+
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="index.html">Головна</a></li>
+				<li><a href="#cars">Асортимент</a></li>
+				<li><a href="info.html" class="active">Про нас</a></li>
+				<li><a href="#" id="reviews-link">Відгуки</a></li>
+				<li><a href="index.html#contacts">Контакти</a></li>
+				<li><a href="by.html" class="external-link">Б\У автомобілі</a></li>
+				<li><a href="inov.html" class="menu-item">Іновації</a></li>
+				<li><a href="maps.html" class="menu-item">Розташування</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<div class="wrapper">
+		<main>
+
+			<section class="about-company">
+				<h1>Про нас</h1>
+				<p class="quote">«Ми не просто автосалон, ми ваш надійний партнер на дорозі.»</p>
+
+				<p><strong>Надаємо якісні автомобілі для будь-яких потреб.</strong> Ми пропонуємо широкий вибір нових та
+					вживаних авто від провідних світових виробників. У нашому салоні ви знайдете машини для міста, подорожей
+					та бізнесу.</p>
+
+				<p><strong>Допомагаємо зробити правильний вибір.</strong> Наші експерти нададуть консультації, проведуть
+					тест-драйви та допоможуть з оформленням документів. Ми працюємо для того, щоб ви відчували себе впевнено
+					за кермом.</p>
+
+				<p>Підтримка клієнтів на всіх етапах — це наш пріоритет. Ми забезпечуємо сервісне обслуговування,
+					страхування та гарантійний супровід для кожного автомобіля.</p>
+
+				<p>Ми працюємо з 2005 року та за цей час стали лідерами ринку завдяки прозорості, надійності та турботі про
+					кожного клієнта. Ваш комфорт і безпека для нас понад усе.</p>
+
+				<p class="year">Ми тут, щоб ваша подорож була незабутньою.</p>
+			</section>
+	</div>
+
+	<!-- Модальне вікно для відгуків -->
+	<div id="reviews-modal" class="modal">
+		<div class="modal-content">
+			<span class="close" onclick="closeReviewsModal()">&times;</span>
+			<h2>Відгуки</h2>
+
+			<!-- Форма для додавання відгуку -->
+			<div id="add-review-form">
+				<input type="text" id="name" placeholder="Ваше ім'я" required>
+				<textarea id="review" placeholder="Ваш відгук" required></textarea>
+				<button onclick="addReview()">Додати відгук</button>
+			</div>
+
+			<!-- Список відгуків -->
+			<div id="review-list">
+				<!-- Відгуки будуть додаватися сюди через JavaScript -->
+			</div>
+		</div>
+	</div>
+
+	<footer id="contacts">
+
+		<p>Телефон: +380 (67) 123-45-67</p>
+		<p>Email: BMWpark@gmail.com</p>
+		<p>
+			<a href="https://www.instagram.com/bmw/" target="_blank">Instagram</a>
+		</p>
+	</footer>
+
+	<link rel="stylesheet" href="info.css">
+
+	<script src="info.js"></script>
+
+
+
+
+</body>
+
+</html>

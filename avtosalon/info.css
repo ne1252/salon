@@ -1,0 +1,309 @@
+/* Стилі для секції "Про нас" */
+#about {
+	text-align: center;
+	padding: 50px 20px;
+	background-color: #f9f9f9;
+	color: #333;
+}
+
+#about h1 {
+	font-size: 2.5em;
+	margin-bottom: 20px;
+}
+
+.about-content {
+	max-width: 800px;
+	margin: 0 auto;
+	line-height: 1.8;
+}
+
+.about-content h2 {
+	margin-top: 20px;
+	font-size: 1.8em;
+	color: #000;
+}
+
+.about-content ul {
+	list-style: none;
+	padding: 0;
+}
+
+.about-content li {
+	padding: 10px 0;
+	border-bottom: 1px solid #ddd;
+}
+
+
+
+#contacts {
+	background-color: #494949; /* Фон */
+	color: #fff; /* Білий текст */
+	display: flex; /* Використання Flexbox */
+	justify-content: space-around; /* Рівномірний розподіл елементів */
+	align-items: center; /* Вирівнювання по центру */
+	padding: 10px 0; /* Внутрішні відступи */
+	font-family: Arial, sans-serif; /* Шрифт */
+	position: fixed; /* Фіксація футера внизу */
+	bottom: 0; /* Прив'язка до низу */
+	left: 0;
+	width: 100%; /* Повна ширина */
+	z-index: 10; 
+}
+
+#contacts p, #contacts a {
+	margin: 0; /* Відступи для елементів */
+	font-size: 1rem; /* Розмір шрифту */
+}
+
+#contacts a {
+	color: #3f729b; /* Колір для посилання */
+	text-decoration: none; /* Без підкреслення */
+	font-weight: bold;
+}
+
+#contacts a:hover {
+	text-decoration: underline; /* Підкреслення при наведенні */
+}
+
+/* Змінюємо поведінку для мобільних пристроїв */
+@media (max-width: 600px) {
+	#contacts {
+		 flex-direction: column; /* Розміщує елементи вертикально */
+		 text-align: center; /* Центрує текст */
+	}
+
+	#contacts p, #contacts a {
+		 margin-bottom: 10px; /* Відступи між елементами */
+	}
+}
+
+
+#contacts {
+	height: 50px; /* Встановіть висоту футера */
+}
+
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+header {
+	background: #333;
+	padding: 10px;
+	text-align: center;
+}
+
+header nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+header nav ul li {
+	display: inline;
+	margin: 0 10px;
+}
+
+header nav ul li a {
+	text-decoration: none;
+	color: white;
+	font-size: 18px;
+	transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+	color: #f0a500;
+}
+
+
+
+/* Заголовок "Про компанію" */
+h1 {
+	font-size: 2.8em;
+	margin-bottom: 15px;
+	font-weight: bold;
+	text-align: center;
+}
+
+/* Основний блок */
+.about-company {
+	max-width: 800px;
+	margin: 50px auto;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+/* Цитата */
+.quote {
+	font-style: italic;
+	color: #666;
+	margin-bottom: 25px;
+	font-size: 1.2em;
+	line-height: 1.5;
+}
+
+/* Підзаголовки та важливий текст */
+strong {
+	font-weight: bold;
+	color: #000;
+}
+
+/* Останній абзац */
+.end {
+	margin-top: 30px;
+	font-weight: bold;
+	color: #000;
+	font-size: 1.1em;
+}
+
+/* Абзаци */
+p {
+	margin-bottom: 20px;
+	font-size: 1.1em;
+	color: #444;
+}
+
+/* Відокремлення пунктів для структури */
+.about-company p:not(:last-child) {
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 15px;
+}
+
+
+footer {
+	background: #333;
+	color: white;
+	text-align: center;
+	padding: 20px;
+}
+#contacts {
+	background-color: #494949; /* Фон */
+	color: #fff; /* Білий текст */
+	display: flex; /* Використання Flexbox */
+	justify-content: space-around; /* Рівномірний розподіл елементів */
+	align-items: center; /* Вирівнювання по центру */
+	padding: 10px 0; /* Внутрішні відступи */
+	font-family: Arial, sans-serif; /* Шрифт */
+	position: fixed; /* Фіксація футера внизу */
+	bottom: 0; /* Прив'язка до низу */
+	left: 0;
+	width: 100%; /* Повна ширина */
+	z-index: 10; 
+	height: 38px; /* Встановіть висоту футера */
+}
+
+#contacts p, #contacts a {
+	margin: 0; /* Відступи для елементів */
+	font-size: 1rem; /* Розмір шрифту */
+	color : #fff;
+}
+
+#contacts a {
+	color: #3f729b; /* Колір для посилання */
+	text-decoration: none; /* Без підкреслення */
+	font-weight: bold;
+}
+
+#contacts a:hover {
+	text-decoration: underline; /* Підкреслення при наведенні */
+}
+
+/* Змінюємо поведінку для мобільних пристроїв */
+@media (max-width: 600px) {
+	#contacts {
+		 flex-direction: column; /* Розміщує елементи вертикально */
+		 text-align: center; /* Центрує текст */
+	}
+
+	#contacts p, #contacts a {
+		 margin-bottom: 10px; /* Відступи між елементами */
+	}
+}
+
+/* Стиль для активної кнопки меню */
+.menu-item.active {
+	color: #f39c12; /* Колір тексту для активної кнопки */
+	font-weight: bold; /* Виділення жирним */
+}
+
+
+
+/* Модальне вікно */
+.modal {
+	display: none; /* Спочатку приховано */
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Місто модального вікна */
+.modal-content {
+	background-color: white;
+	margin: 15% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+	max-width: 500px;
+}
+
+/* Кнопка закриття */
+.close {
+	color: #aaa;
+	font-size: 28px;
+	font-weight: bold;
+	position: absolute;
+	top: 10px;
+	right: 20px;
+}
+
+.close:hover,
+.close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* Відгуки */
+#review-list {
+	margin-top: 20px;
+}
+
+.review-item {
+	margin: 10px 0;
+	padding: 10px;
+	background-color: #f9f9f9;
+	border-radius: 5px;
+}
+
+#add-review-form {
+	margin-bottom: 20px;
+}
+
+#add-review-form input,
+#add-review-form textarea {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+#add-review-form button {
+	padding: 10px 20px;
+	background-color: #4CAF50;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#add-review-form button:hover {
+	background-color: #45a049;
+}

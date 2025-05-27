@@ -1,0 +1,615 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+header {
+	background: #333;
+	padding: 15px;
+	text-align: center;
+}
+
+header nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+header nav ul li {
+	display: inline;
+	margin: 0 10px;
+}
+
+header nav ul li a {
+	text-decoration: none;
+	color: white;
+	font-size: 18px;
+	transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+	color: #f0a500;
+}
+
+.slideshow {
+	position: relative;
+	width: 100%;
+	max-width: 800px;
+	margin: 20px auto;
+	overflow: hidden;
+	background-color: #333; /* Задній фон для слайд-шоу (темний колір) */
+	border-radius: 10px; /* Округлені кути для слайд-шоу */
+ }
+
+.slide {
+	display: none;
+	height: 400px;
+	background-size: cover;
+	background-position: center;
+}
+
+.slide.active {
+	display: block;
+}
+
+.controls {
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	transform: translateY(-50%);
+}
+
+.controls button {
+	background: rgba(0, 0, 0, 0.5);
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	cursor: pointer;
+}
+
+.controls button:hover {
+	background: rgba(0, 0, 0, 0.8);
+}
+
+
+.car-list {
+	display: flex; /* Використовуємо Flexbox для вирівнювання елементів в ряд */
+	flex-wrap: wrap; /* Дозволяє елементам переноситися на новий ряд при необхідності */
+	justify-content: space-between; /* Вирівнює елементи по ширині контейнера з відстанями між ними */
+	padding: 10px;
+}
+
+.car {
+	width: calc(33.333% - 20px); /* Кожен автомобіль займає 1/3 ширини контейнера, враховуючи відступи */
+	max-width: 300px; /* Максимальна ширина автомобіля */
+	margin: 10px; /* Відступи між автомобілями */
+	text-align: center; /* Вирівнювання тексту по центру */
+	box-sizing: border-box; /* Враховуємо відступи в ширину елементів */
+}
+
+.car img {
+	width: 100%; /* Зображення займає всю ширину батьківського елемента */
+	height: 200px; /* Встановлюємо фіксовану висоту */
+	object-fit: cover; /* Зберігає пропорції зображення, обрізає його, якщо потрібно */
+	border-radius: 10px; /* Закруглені краї */
+}
+
+
+.car img:hover {
+	transform: scale(1.1); /* Збільшення при наведенні */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тінь при наведенні */
+}
+
+
+
+footer {
+	background: #333;
+	color: white;
+	text-align: center;
+	padding: 20px;
+}
+
+/* Модальне вікно (приховано за замовчуванням) */
+	.modal {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(255, 0, 0, 0.5);
+		justify-content: center;
+		align-items: center;
+		z-index: 9999; /* Вищий z-index для модального вікна */
+	 }
+	 
+	.modal-content {
+    position: relative; /* Для правильного позиціонування кнопки закриття */
+    padding: 20px;
+    background-color: white;
+    width: 80%; /* Ширина модального вікна */
+    max-width: 600px;
+    margin: auto;
+    border-radius: 8px;
+}
+
+.close-about {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.close-about:hover,
+.close-about:focus {
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+}
+
+
+.home-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.logo-container {
+	/* Логотип не буде зменшуватися */
+	margin-right: 100px; /* Відстань між логотипом і слайд-шоу */
+}
+
+.bmw-logo {
+	width: 250px; /* Ширина логотипу */
+	height: auto; /* Пропорційне масштабування */
+	background-color: #fff; /* Білий фон для логотипу */
+	padding: 10px;
+	border-radius: 8px; /* Округлені краї логотипу */
+ 
+}
+
+.slideshow {
+	position: relative;
+	width: 100%;
+	max-width: 800px;
+	margin: 20px auto;
+	overflow: hidden;
+}
+
+.slide {
+	display: none;
+	height: 400px;
+	background-size: cover;
+	background-position: center;
+}
+
+.slide.active {
+	display: block;
+}
+
+.controls {
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	transform: translateY(-50%);
+}
+
+.controls button {
+	background: rgba(0, 0, 0, 0.5);
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	cursor: pointer;
+}
+
+.controls button:hover {
+	background: rgba(0, 0, 0, 0.8);
+}
+
+/* Стилі для модального вікна */
+.modal {
+	display: none; /* Вікно приховане за замовчуванням */
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8); /* Напівпрозорий фон */
+	z-index: 1000;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Контент модального вікна */
+.modal-content {
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 10px;
+	width: 80%;
+	max-width: 600px;
+	text-align: center;
+	position: relative;
+}
+
+.modal-content .close {
+	position: absolute;
+	top: 10px;
+	right: 15px;
+	font-size: 24px;
+	cursor: pointer;
+	color: #333;
+	transition: color 0.3s;
+}
+
+.modal-content .close:hover {
+	color: #f00;
+}
+
+#add-review-form input, #add-review-form textarea {
+	width: 100%; /* Встановлює ширину елемента на 100% батьківського контейнера */
+	padding: 10px;
+	margin: 10px 0;
+	border-radius: 5px;
+	border: 1px solid #070000;
+	font-size: 16px;
+	box-sizing: border-box; /* Враховує padding у загальному розмірі елемента */
+}
+
+/* Фіксований розмір текстового поля для відгуку */
+#add-review-form textarea {
+	height: 120px; /* Фіксована висота для textarea */
+	resize: none; /* Забороняє змінювати розмір текстового поля */
+}
+
+/* Кнопка додавання відгуку */
+#add-review-form button {
+	padding: 10px 20px;
+	background-color: #4CAF50;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#add-review-form button:hover {
+	background-color: #45a049;
+}
+
+
+
+
+/* Стилі для відгуків */
+#review-list {
+	margin-top: 20px;
+}
+/* Стилі для контейнера відгуків з прокручуванням */
+#reviews-container {
+	max-height: 400px; /* Встановлюємо максимальну висоту для блоку з відгуками */
+	overflow-y: scroll; /* Додаємо вертикальну прокрутку */
+	margin-top: 20px;
+	padding: 10px;
+	border: 10px solid #070000; /* Рамка для контейнера відгуків */
+	border-radius: 10px; /* Закруглені кути для контейнера */
+	background-color: #f8f8f8; /* Світло-сірий фон для контейнера */
+ }
+ 
+ /* Стилі для кожного відгуку */
+ .review {
+	margin-bottom: 15px;
+	padding: 15px;
+	background-color: #ffffff; /* Білий фон для кожного відгуку */
+	border-radius: 8px; /* Округлені кути для відгуку */
+	border: 10px solid #007bff; /* Синя рамка навколо кожного відгуку */
+ }
+ 
+ /* Стилі для заголовка відгуку */
+ .review h4 {
+	margin: 0;
+	font-size: 18px;
+	font-weight: bold;
+	color: #333; /* Текст темного кольору для заголовку */
+ }
+ 
+ /* Стилі для тексту відгуку */
+ .review p {
+	margin: 10px 0 0; /* Відступ для тексту */
+	font-size: 16px;
+	color: #555; /* Темно-сірий текст для відгуку */
+ }
+ 
+ #cars h2 {
+	text-align: center; /* Вирівнює текст по центру */
+	font-size: 24px; /* Розмір шрифту */
+	margin-bottom: 20px; /* Відступ знизу */
+	color: #333; /* Колір тексту */
+ }
+ 
+ #home h1 {
+	text-align: center; /* Вирівнює текст по центру */
+	font-size: 48px; /* Розмір шрифту */
+	margin-bottom: 20px; /* Відступ знизу */
+	color: #333; /* Колір тексту */
+ }
+ 
+ #contacts {
+	display: flex;
+	justify-content: space-around; /* Рівномірний розподіл елементів */
+	align-items: center; /* Вирівнювання по вертикалі */
+	padding: 20px; /* Відступи */
+	background-color: #494949; /* Фон */
+	font-family: Arial, sans-serif;
+	
+}
+
+#contacts p, #contacts a {
+	margin: 0; /* Відступи для елементів */
+	font-size: 1rem; /* Розмір шрифту */
+}
+
+#contacts a {
+	color: #3f729b; /* Колір для посилання */
+	text-decoration: none; /* Без підкреслення */
+	font-weight: bold;
+}
+
+#contacts a:hover {
+	text-decoration: underline; /* Підкреслення при наведенні */
+}
+
+/* Змінюємо поведінку для мобільних пристроїв */
+@media (max-width: 600px) {
+	#contacts {
+		 flex-direction: column; /* Розміщує елементи вертикально */
+		 text-align: center; /* Центрує текст */
+	}
+
+	#contacts p, #contacts a {
+		 margin-bottom: 10px; /* Відступи між елементами */
+	}
+}
+
+
+
+
+.external-site-btn {
+	display: inline-block;
+	padding: 10px 15px;
+	color: white;
+	background-color: #007bff; /* Синій колір фону */
+	border-radius: 5px; /* Округлені краї */
+	text-decoration: none;
+	font-weight: bold;
+	transition: background-color 0.3s ease;
+}
+
+.external-site-btn:hover {
+	background-color: #0056b3; /* Темніший синій при наведенні */
+	color: #fff;
+}
+
+
+
+/* Загальний стиль */
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+header, footer {
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	padding: 10px 0;
+}
+
+/* Стилізація для сторінки by.html */
+.by-content {
+	background-color: #f9f9f9;
+	padding: 20px;
+}
+
+.by-item {
+	border: 1px solid #ddd;
+	padding: 10px;
+	margin: 10px 0;
+}
+
+/* Забезпечуємо правильне розташування */
+.header-content {
+	display: flex;
+	align-items: center;
+}
+
+.logo1-container {
+	/* Логотип не буде зменшуватися */
+	margin-right: 100px; /* Відстань між логотипом і слайд-шоу */
+}
+
+.bmw-logo1 {
+	width: 250px; /* Ширина логотипу */
+	height: auto; /* Пропорційне масштабування */
+	background-color: #fff; /* Білий фон для логотипу */
+	padding: 10px;
+	border-radius: 8px; /* Округлені краї логотипу */
+ 
+}
+
+.header-content {
+	display: flex;
+	align-items: center;
+}
+
+/* Загальні стилі для логотипів */
+.bmw-logo, .logo1 {
+	width: 250px; /* Ширина логотипу */
+	height: auto; /* Пропорційне масштабування */
+	background-color: #fff; /* Білий фон для логотипу */
+	padding: 10px;
+	border-radius: 8px; /* Округлені краї логотипу */
+}
+
+/* Для контейнера логотипів */
+.logo-container, .logo1-container {
+	/* Логотип не буде зменшуватися */
+	margin-right: 100px; /* Відстань між логотипом і слайд-шоу */
+}
+
+
+/* Стиль для сірої смуги */
+.separator1 {
+	width: 100%; /* Займає всю ширину */
+	height: 40px; /* Висота смуги */
+	background-color: #424242; /* Сірий колір */
+	margin: 20px 0; /* Відступи зверху та знизу */
+}
+
+/* Стиль для сірої смуги */
+.separator {
+	width: 100%; /* Займає всю ширину */
+	height: 40px; /* Висота смуги */
+	background-color: #424242; /* Сірий колір */
+	margin: 20px 0; /* Відступи зверху та знизу */
+}
+
+
+/* Стиль для активної кнопки меню */
+.menu-item.active {
+	color: #f39c12; /* Колір тексту для активної кнопки */
+	font-weight: bold; /* Виділення жирним */
+}
+
+/* Плавний перехід для кольорів */
+.menu-item {
+	transition: color 0.3s ease;
+}
+
+/* Для скроллінгу */
+html {
+	scroll-behavior: smooth;
+}
+
+/* Загальний стиль */
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+header, footer {
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	padding: 10px 0;
+}
+
+/* Стилізація для сторінки by.html */
+.inov-content {
+	background-color: #f9f9f9;
+	padding: 20px;
+}
+
+.inov-item {
+	border: 1px solid #ddd;
+	padding: 10px;
+	margin: 10px 0;
+}
+
+/* Забезпечуємо правильне розташування */
+.header-content {
+	display: flex;
+	align-items: center;
+}
+
+
+/* Стилі для іновацій */
+.innovation {
+
+	margin-bottom: 40px; /* Відступ між іноваціями */
+}
+
+.innovation img {
+	width: 80%; /* Встановлюємо ширину зображення */
+	max-width: 600px; /* Максимальна ширина для великих зображень */
+	height: auto; /* Зберігаємо пропорції зображення */
+	display: block; /* Робимо зображення блоковим елементом */
+	margin: 0 auto; /* Центруємо зображення */
+}
+
+h2  {
+	text-align: center; /* Центруємо заголовки */
+	font-size: 39px;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+ul li {
+	margin-bottom: 10px; /* Відступ між пунктами списку */
+}
+
+
+#modal-details {
+	list-style-type: none; /* Забирає маркери списку */
+	padding: 0;
+}
+
+#modal-details li {
+	margin-bottom: 10px; /* Відстань між елементами */
+	font-size: 1.1em; /* Розмір шрифту для кращої читабельності */
+}
+
+#modal-title {
+	font-size: 2em; /* Розмір шрифту для заголовка */
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+#modal {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.7);
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+}
+
+#modal-content {
+	position: relative;
+	background: white;
+	padding: 20px;
+	border-radius: 10px;
+	max-width: 500px;
+	width: 100%;
+}
+
+#close-btn {
+	position: absolute;
+	top: 10px;
+	right: 15px;
+	font-size: 30px;
+	cursor: pointer;
+	color: #333;
+}
+
+#close-btn:hover {
+	color: red;
+}
+
+

@@ -1,0 +1,164 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+header {
+	background: #333;
+	padding: 10px;
+	text-align: center;
+}
+
+header nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+header nav ul li {
+	display: inline;
+	margin: 0 10px;
+}
+
+header nav ul li a {
+	text-decoration: none;
+	color: white;
+	font-size: 18px;
+	transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+	color: #f0a500;
+}
+
+h1 {
+	text-align: center;
+	margin: 20px 0;
+}
+
+.dealer-list {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.accordion {
+	background-color: #f1f1f1;
+	color: #333;
+	cursor: pointer;
+	padding: 15px;
+	width: 100%;
+	text-align: left;
+	border: none;
+	outline: none;
+	transition: 0.4s;
+	font-size: 16px;
+}
+
+.accordion:hover {
+	background-color: #ddd;
+}
+
+.panel {
+	display: none;
+	background-color: white;
+	padding: 10px 15px;
+	border: 1px solid #ddd;
+	border-top: none;
+}
+
+.panel p {
+	margin: 5px 0;
+}
+
+
+.menu-item.active {
+	color: #f39c12; /* Колір тексту для активної кнопки */
+	font-weight: bold; /* Виділення жирним */
+}
+
+
+footer {
+	background: #333;
+	color: white;
+	text-align: center;
+	padding: 20px;
+}
+#contacts {
+	background-color: #494949; /* Фон */
+	color: #fff; /* Білий текст */
+	display: flex; /* Використання Flexbox */
+	justify-content: space-around; /* Рівномірний розподіл елементів */
+	align-items: center; /* Вирівнювання по центру */
+	padding: 10px 0; /* Внутрішні відступи */
+	font-family: Arial, sans-serif; /* Шрифт */
+	position: fixed; /* Фіксація футера внизу */
+	bottom: 0; /* Прив'язка до низу */
+	left: 0;
+	width: 100%; /* Повна ширина */
+	z-index: 10; 
+	height: 38px; /* Встановіть висоту футера */
+}
+
+#contacts p, #contacts a {
+	margin: 0; /* Відступи для елементів */
+	font-size: 1rem; /* Розмір шрифту */
+	color : #fff;
+}
+
+#contacts a {
+	color: #3f729b; /* Колір для посилання */
+	text-decoration: none; /* Без підкреслення */
+	font-weight: bold;
+}
+
+#contacts a:hover {
+	text-decoration: underline; /* Підкреслення при наведенні */
+}
+
+/* Змінюємо поведінку для мобільних пристроїв */
+@media (max-width: 600px) {
+	#contacts {
+		 flex-direction: column; /* Розміщує елементи вертикально */
+		 text-align: center; /* Центрує текст */
+	}
+
+	#contacts p, #contacts a {
+		 margin-bottom: 10px; /* Відступи між елементами */
+	}
+}
+
+/* Стилі для опису */
+/* Стилі для опису */
+.notification {
+	background-color: #fff; /* Білий фон */
+	padding: 30px;
+	border-radius: 10px;
+	border: 2px solid #757575; /* Темна обводка */
+	margin: 20px 0;
+	text-align: left;
+	font-family: 'Arial', sans-serif;
+	box-shadow: 0 4px 10px rgba(109, 107, 107, 0.1); /* Тінь для об'єму */
+}
+
+.notification h2 {
+	font-size: 2em; /* Великий розмір для заголовка */
+	font-weight: bold;
+	color: #333;
+	margin-bottom: 10px;
+	line-height: 1;
+}
+
+.notification p {
+	color: #555;
+	font-size: 1.2em;
+	margin: 5px 0;
+	line-height: 1.6;
+}
+
+.notification strong {
+	font-weight: bold;
+	color: #333;
+}
+

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>BMW AutoPark</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="index.html" class="menu-item">Головна</a></li>
+				<li><a href="#cars">Асортимент</a></li>
+				<li><a href="info.html">Про нас</a></li>
+				<li><a href="#" id="reviews-link">Відгуки</a></li> <!-- Змінили на # -->
+				<li><a href="#contacts">Контакти</a></li>
+				<li><a href="by.html" class="external-link">Б\У автомобілі</a></li>
+				<li><a href="inov.html" class="menu-item">Іновації</a></li> <!-- Новий пункт меню -->
+				<li><a href="maps.html" class="menu-item">Розташування</a></li>
+			</ul>
+		</nav>
+	</header>
+
+
+	<section id="home">
+		<h1>Б/У автомобілі</h1>
+		<div class="home-container">
+			<img src="images/bmw-logo.jpg" alt="BMW Logo" class="logo1">
+			<div class="slideshow">
+				<div class="slide active" style="background-image: url('images/sl1.jpg');"></div>
+				<div class="slide" style="background-image: url('images/sl2.jpg');"></div>
+				<div class="slide" style="background-image: url('images/sl3.jpg');"></div>
+				<div class="controls">
+					<button class="prev">&#10094;</button>
+					<button class="next">&#10095;</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="separator1"></div>
+
+	<section id="cars">
+		<h2>Б/У автомобілі в наявності</h2>
+		<div class="car-list">
+			<div class="car"
+				onclick="openModal('BMW XM ', 'Ціна: $43 324', 'Двигун: 3.0L, 345 к.с.', 'Привід: задній','Колір: чорний', 'Рік випуску: 2022', 'Розбита задній бампер, права задня фара,праве заднє крило')">
+				<img src="images/XMtotal.jpg" alt="BMW 5 Series">
+				<h3>BMW XM</h3>
+				<p>Ціна: $43,324</p>
+			</div>
+
+			<div class="car"
+				onclick="openModal('BMW M5 Series', 'Ціна: $35,544', 'Двигун: 2.5L, 543 к.с.', 'Привід: повний','Колір: білий','Рік випуску: 2019','Розбитий передній бампер, капот, дві передні фари, лобове скло, передні крила')">
+				<img src="images/M5total.jpg" alt="BMW X3">
+				<h3>BMW M5 Series</h3>
+				<p>Ціна: $35,544</p>
+			</div>
+
+			<div class="car"
+				onclick="openModal('BMW E60', 'Ціна: $8,400', 'Двигун: 3.0L, 220 к.с.', 'Привід: задній','Колір: синій','Рік випуску: 2008','Розбитий передній бампер, капот,передні фари, передні крила')">
+				<img src="images/E60tooal.jpg" alt="BMW E60">
+				<h3>BMW E 60</h3>
+				<p>Ціна: $8,400</p>
+			</div>
+
+			<div class="car"
+				onclick="openModal('BMW M3', 'Ціна: $30,100', 'Двигун: 3.4L, 320 к.с.', 'Привід: передній','Колір: чорний','Рік випуску: 2010','Розбитий передній бампер, капот,передні фари, передні крила')">
+				<img src="images/M3total.jpg" alt="BMW M3">
+				<h3>BMW 1 Series</h3>
+				<p>Ціна: $20,000</p>
+			</div>
+		</div>
+	</section>
+
+
+	<div id="modal">
+		<div id="modal-content">
+			<span id="close-btn">&times;</span>
+			<h2 id="modal-title"></h2>
+			<ul id="modal-details">
+				<li id="modal-price"></li>
+				<li id="modal-engine"></li>
+				<li id="modal-drive"></li>
+				<li id="modal-color"></li>
+				<li id="modal-rik"></li>
+				<li id="modal-info"></li>
+			</ul>
+		</div>
+	</div>
+
+
+
+	<footer id="contacts">
+		<p>Телефон: +380 (67) 123-45-55</p>
+		<p>Email: byprodaj@gmail.com</p>
+		<p>
+			<a href="https://www.instagram.com/bmw/" target="_blank">Instagram</a>
+		</p>
+	</footer>
+
+	<script src="script.js"></script>
+
+	<link rel="stylesheet" href="styles.css">
+	<script src="sk.js"></script>
+
+
+
+</body>
+
+</html>
